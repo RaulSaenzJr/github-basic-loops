@@ -10,8 +10,17 @@ return anything.
 */
 
 // Your code here 
+// Define a function called logBetweenStepper that takes in 3 numbers as parameters
+function logBetweenStepper(minNum, maxNum, interval) {
+    // create a for loop to iterate through the numbers
+    for (let i = minNum; i <= maxNum; i += interval) {
+        // print out the numbers
+        console.log(i);
+    }
+}
 
-// logBetweenStepper(5, 9, 1);
+logBetweenStepper(5, 9, 1);
+logBetweenStepper(3, 21, 3);
 /* prints out:
 5
 6
