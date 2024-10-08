@@ -8,17 +8,26 @@ All alphabetic characters may be uppercase or lowercase.
 */
 
 // Your code here 
+// define a function validHexCode that returns true if its string parameter is a valid hex code
+function validHexCode(str1) {
+    // create a variable to store the hex code
+    const hexCode = /^[#][0-9A-Fa-f]{6}$/;
+    // return the hex code
+    return hexCode.test(str1);
+}
 
-// console.log(validHexCode("#123456"));  // true
-// console.log(validHexCode("!123456"));  // false
-// console.log(validHexCode("#123"));     // false
-// console.log(validHexCode("#1234567")); // false
-// console.log(validHexCode("1234567"));  // false
-// console.log(validHexCode("123456"));   // false
-// console.log(validHexCode("#ABCDEF"));  // true
-// console.log(validHexCode("#abcDEF"));  // true
-// console.log(validHexCode("#88ef29"));  // true
-// console.log(validHexCode("#222!E4"));  // false
+
+
+console.log(validHexCode("#123456"));  // true
+console.log(validHexCode("!123456"));  // false
+console.log(validHexCode("#123"));     // false
+console.log(validHexCode("#1234567")); // false
+console.log(validHexCode("1234567"));  // false
+console.log(validHexCode("123456"));   // false
+console.log(validHexCode("#ABCDEF"));  // true
+console.log(validHexCode("#abcDEF"));  // true
+console.log(validHexCode("#88ef29"));  // true
+console.log(validHexCode("#222!E4"));  // false
 
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
