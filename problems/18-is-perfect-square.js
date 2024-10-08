@@ -10,16 +10,28 @@ For example, since 64 = 8 * 8 and 144 = 12 * 12, 64 and 144 are perfect squares;
 */
 
 // Your code here 
+// Write a function isPerfectSquare that accepts a number as an argument
+function isPerfectSquare(num) {
+    // create a variable to store the square root of the number
+    let squareRoot = Math.sqrt(num);
+    // check if the square root is an integer
+    if (Number.isInteger(squareRoot)) {
+        // return true
+        return true;
+    }
+    // return false
+    return false;
+}
 
-// console.log(isPerfectSquare(1))     // true
-// console.log(isPerfectSquare(4))     // true
-// console.log(isPerfectSquare(64))    // true
-// console.log(isPerfectSquare(100))   // true
-// console.log(isPerfectSquare(169))   // true
-// console.log(isPerfectSquare(2))     // false
-// console.log(isPerfectSquare(40))    // false
-// console.log(isPerfectSquare(32))    // false
-// console.log(isPerfectSquare(50))    // false
+console.log(isPerfectSquare(1))     // true
+console.log(isPerfectSquare(4))     // true
+console.log(isPerfectSquare(64))    // true
+console.log(isPerfectSquare(100))   // true
+console.log(isPerfectSquare(169))   // true
+console.log(isPerfectSquare(2))     // false
+console.log(isPerfectSquare(40))    // false
+console.log(isPerfectSquare(32))    // false
+console.log(isPerfectSquare(50))    // false
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = isPerfectSquare;
