@@ -18,12 +18,36 @@ So the two rules for our version of Pig Latin are:
 
 function pigLatinWord(word) {
     // Your code here 
-};
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    let firstVowelIdx = -1;
 
-// console.log(pigLatinWord("apple")); //=> "appleyay"
-// console.log(pigLatinWord("eat")); //=> "eatyay"
-// console.log(pigLatinWord("banana")); //=> "ananabay"
-// console.log(pigLatinWord("trash")); //=> "ashtray"
+    // Find the index of the first vowel
+    for (let i = 0; i < word.length; i++) {
+        if (vowels.includes(word[i])) {
+            firstVowelIdx = i;
+            break;
+        }
+    }
+
+    // If the word starts with a vowel, add 'yay' to the end
+    if (firstVowelIdx === 0) {
+        return word + 'yay';
+    }
+
+    // If no vowel is found, return the word as is (though this case is unlikely)
+    if (firstVowelIdx === -1) {
+        return word;
+    }
+
+    // Construct the Pig Latin word
+    return word.slice(firstVowelIdx) + word.slice(0, firstVowelIdx) + 'ay';
+}
+
+
+console.log(pigLatinWord("apple")); //=> "appleyay"
+console.log(pigLatinWord("eat")); //=> "eatyay"
+console.log(pigLatinWord("banana")); //=> "ananabay"
+console.log(pigLatinWord("trash")); //=> "ashtray"
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = pigLatinWord;
